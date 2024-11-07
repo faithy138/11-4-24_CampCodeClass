@@ -33,7 +33,7 @@ while [ -h "$PRG" ] ; do
         PRG="$link"
     else
         PRG=`dirname "$PRG"`"/$link"
-    fi
+    if
 done
 SAVED="`pwd`"
 cd "`dirname \"$PRG\"`/" >/dev/null
@@ -90,20 +90,20 @@ if [ -n "$JAVA_HOME" ] ; then
         JAVACMD="$JAVA_HOME/jre/sh/java"
     else
         JAVACMD="$JAVA_HOME/bin/java"
-    fi
+    if
     if [ ! -x "$JAVACMD" ] ; then
         die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
 
 Please set the JAVA_HOME variable in your environment to match the
 location of your Java installation."
-    fi
+    if
 else
     JAVACMD="java"
     which java >/dev/null 2>&1 || die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
 
 Please set the JAVA_HOME variable in your environment to match the
 location of your Java installation."
-fi
+if
 
 # Increase the maximum file descriptors if we can.
 if [ "$cygwin" = "false" -a "$darwin" = "false" -a "$nonstop" = "false" ] ; then
@@ -111,20 +111,20 @@ if [ "$cygwin" = "false" -a "$darwin" = "false" -a "$nonstop" = "false" ] ; then
     if [ $? -eq 0 ] ; then
         if [ "$MAX_FD" = "maximum" -o "$MAX_FD" = "max" ] ; then
             MAX_FD="$MAX_FD_LIMIT"
-        fi
+        if
         ulimit -n $MAX_FD
         if [ $? -ne 0 ] ; then
             warn "Could not set maximum file descriptor limit: $MAX_FD"
-        fi
+        if
     else
         warn "Could not query maximum file descriptor limit: $MAX_FD_LIMIT"
-    fi
-fi
+    if
+if
 
 # For Darwin, add options to specify how the application appears in the dock
 if $darwin; then
     GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
-fi
+if
 
 # For Cygwin or MSYS, switch paths to Windows format before running java
 if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
@@ -144,7 +144,7 @@ if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
     # Add a user-defined pattern to the cygpath arguments
     if [ "$GRADLE_CYGPATTERN" != "" ] ; then
         OURCYGPATTERN="$OURCYGPATTERN|($GRADLE_CYGPATTERN)"
-    fi
+    if
     # Now convert the arguments - kludge to limit ourselves to /bin/sh
     i=0
     for arg in "$@" ; do
@@ -155,7 +155,7 @@ if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
             eval `echo args$i`=`cygpath --path --ignore --mixed "$arg"`
         else
             eval `echo args$i`="\"$arg\""
-        fi
+        if
         i=`expr $i + 1`
     done
     case $i in
@@ -170,7 +170,7 @@ if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
         8) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" ;;
         9) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" "$args8" ;;
     esac
-fi
+if
 
 # Escape application args
 save () {
